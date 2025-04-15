@@ -11,5 +11,16 @@ element.addEventListener("click", function () {
       let ascii = originalPassword.charCodeAt(i);
       asciiPassword += String.fromCharCode(ascii + 3);
     }
+    // Get the first element with the class 'my-container'
+    let container = document.querySelector(".content");
+
+    // Create a new element
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent =
+      "Your password has been encoded using the Caesar cipher:" + asciiPassword;
+
+    // Append the new element to the container
+    container.appendChild(newParagraph);
+    alert(asciiPassword); //it works
   }
 });
